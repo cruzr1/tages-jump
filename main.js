@@ -1,6 +1,6 @@
 import { createReadStream } from 'node:fs';
 import readline from 'node:readline';
-import sortAndWriteToFile from './writeSortedFiles.js';
+import writeToFile from './writeToFile.js';
 import mergeFractionFiles from './mergeFractionFiles.js';
 import { CHUNK, MEMORY_LIMIT, FILE_NAME } from './const.js';
 
@@ -18,12 +18,12 @@ async function bootstrap(fileName) {
     size += line.length;
     tempChunk.push(line);
     if (size > MEMORY_LIMIT) {
-      await sortAndWriteToFile(tempChunk, fractionFiles);
+      await writeToFile(tempChunk, fractionFiles);
       size = 0;
     }
   }
   if (tempChunk.length > 0) {
-    await sortAndWriteToFile(tempChunk, fractionFiles);
+    await writeToFile(tempChunk, fractionFiles);
   }
   await mergeFractionFiles(fractionFiles, fileName);
 }

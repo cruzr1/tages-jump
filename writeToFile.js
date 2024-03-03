@@ -3,7 +3,7 @@ import { pipeline } from 'node:stream/promises';
 import { createWriteStream } from 'fs';
 import { CHUNK } from './const.js';
 
-export default async function sortAndWriteToFile(tempChunk, fractionFiles) {
+export default async function writeToFile(tempChunk, fractionFiles) {
   tempChunk.sort((a, b) => a.localeCompare(b));
   const fractionFileName = `tmp_sort_${crypto.randomUUID()}`;
   fractionFiles.push(fractionFileName);
