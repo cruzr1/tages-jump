@@ -1,7 +1,7 @@
 import { createReadStream, createWriteStream } from 'node:fs';
 import { pipeline } from 'node:stream/promises';
-import { readline } from 'node:readline';
-import { CHUNK } from './const';
+import readline from 'node:readline';
+import { CHUNK } from './const.js';
 
 export default async function joinFiles(joiningFiles, fileName) {
   const sortedFileName = `${fileName.split('.txt')[0]}-sorted.txt`;

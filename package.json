@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "Tages jump test",
   "scripts": {
-    "start": "main.js",
+    "start": "node ./main.js",
     "lint": "eslint"
   },
   "author": "Rinat Zaripov",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "eslint": "^8.57.0"
-  }
+  "type": "module"
 }

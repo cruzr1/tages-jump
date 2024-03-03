@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import { pipeline } from 'node:stream/promises';
 import { createWriteStream } from 'fs';
-import { CHUNK } from './const';
+import { CHUNK } from './const.js';
 
 export default async function sortAndWriteToFile(tempChunk, fractionFiles) {
   tempChunk.sort((a, b) => a.localeCompare(b));

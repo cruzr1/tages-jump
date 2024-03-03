@@ -1,5 +1,5 @@
 import { rm, rename} from 'node:fs/promises';
-import joinFiles from './joinFiles';
+import joinFiles from './joinFiles.js';
 
 export default async function mergeFractionFiles(fractionFiles, fileName) {
   while (fractionFiles.length > 1) {

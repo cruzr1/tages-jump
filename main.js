@@ -1,5 +1,5 @@
 import { createReadStream } from 'node:fs';
-import { readline } from 'node:readline';
+import readline from 'node:readline';
 import sortAndWriteToFile from './writeSortedFiles.js';
 import mergeFractionFiles from './mergeFractionFiles.js';
 import { CHUNK, MEMORY_LIMIT, FILE_NAME } from './const.js';
